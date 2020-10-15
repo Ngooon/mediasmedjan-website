@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    
+    <title>Mediasmedjan UF</title>
+    <link rel="icon" href="./images/logo.svg">
+    
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Reklamfilmer">
+    <meta name="keywords" content="Reklamfilmer">
+    <meta name="author" content="Mediasmedjan">
+</head>
+<body id="index">
+    <header>
+        <h1>Mediasmedjan UF</h1>
+        <div class="center-box">
+            <a href="/">
+                <h3>Mediasmedjan UF</h3>    <!-- Temporary replacement for logo image. -->
+                <!-- <img src="./images/logoText.png" alt="" id="header-logo"> -->
+                <script>
+                    // Change logo if screen is to small
+                    function funcMax450(varMax450) {
+                        if (varMax450.matches) { // If media query matches
+                            document.getElementById("header-logo").src = "images/Logo.svg";
+                        } else {
+                            document.getElementById("header-logo").src = "images/LogoText_Låg.png";
+                        }
+                    }
+                
+                    var varMax450 = window.matchMedia("(max-width: 450px)")
+                    funcMax450(varMax450) // Call listener function at run time
+                    varMax450.addListener(funcMax450) // Attach listener function on state changes
+                </script>
+            </a>
+            <nav>
+                <input id="menu-btn" type="checkbox">
+                <label for="menu-btn">
+                    <span></span>
+                </label>
+                <ul>
+                    <li><a href="./index.html">Hem</a></li>
+                    <li><a href="./tjanster.html">Tjänster</a></li>
+                    <li><a href="./om.html">Om oss</a></li>
+                    <li><a href="./kontakt.php">Kontakt</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    
+    <main>
+        <section>
+            <div class="center-box">
+                <div>
+                    <h2>Mediasmedjan</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                    <a class="button white trans" href="./tjanster.html">Tjänster</a>
+                    <a class="button solid blue" href="./kontakt.php">Kontakt</a>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <h2>
+                &copy; 2020
+                <script>
+                    // Write this year if it's not equal to start year.
+                    if (new Date().getFullYear() > 2020) {
+                        document.write("- " + new Date().getFullYear());
+                    }
+                </script>
+                Mediasmdjan UF
+            </h2>
+        </footer>
+    </main>
+</body>
+</html>
