@@ -388,6 +388,8 @@ main {
   padding-bottom: 10px;
   margin-bottom: 50px;  /* Some space for footer. */
   min-height: calc(100vh - 50px - 100px); /* Make footer correct height. */
+  width: 100%;
+  box-sizing: unset;
 }
 
 footer {
@@ -431,10 +433,17 @@ footer h2 {
 #index main>:first-child {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/start-img.png");
   height: 500px;
+  max-width: 100%;
 }
 
-#index main>:first-child h2+* {
+#index main>:first-child h2 {
+  margin-left: 10px;
+  font-size: 2.4em;
+}
+
+#index main>:first-child p {
   margin-bottom: 40px;
+  margin-left: 10px;
 }
 
 #index main>:first-child .button {
@@ -442,11 +451,65 @@ footer h2 {
   margin: auto 10px;
   --btn-padding-height: 14px;
   --btn-padding-width: 20px;
+  /* display: inline-block; */
 }
 
 /* Responsive  */
 @media only screen and (min-width: 600px) {
+  #index main>:first-child h2 {
+    margin-left: 20px;
+    font-size: 3em;
+  }
+  
+  #index main>:first-child p {
+    margin-bottom: 40px;
+    margin-left: 20px;
+  }
+
   #index main>:first-child .button {
     margin: auto 20px;  /* Smaller margin between buttons. */
+  }
+}
+
+/* Three cards */
+#three-cards {
+  display: block;
+  text-align: center;
+  margin-top: -50px;
+  position: relative;
+  z-index: 2;
+}
+
+#three-cards h2 {
+  display: none;
+}
+
+#three-cards section {
+  padding: 10px;
+  margin: 30px 10px;
+  box-shadow: 0px 0px 10px 4px rgba(0,0,0,.1);
+  background-color: #ffffff;
+}
+
+@media only screen and (min-width: 600px) {
+  #three-cards {
+    display: flex;
+  }
+
+  #three-cards section {
+    margin: 30px 10px;
+    margin-top: 0;
+  }
+}
+
+@media only screen and (min-width: 998px) {
+  #three-cards {
+    display: flex;
+  }
+
+  #three-cards section {
+    margin: 30px 30px;
+    padding: 20px 30px;
+    margin-top: 0;
   }
 }
