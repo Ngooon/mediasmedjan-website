@@ -122,7 +122,7 @@ main>section {
 	font-size: 15px;
 	text-decoration: none;
 	text-align: center;
-	border-radius: 10px;
+	/* border-radius: 10px; */
 	margin: 4px 6px;
 	padding: var(--btn-padding-height) var(--btn-padding-width);
 	cursor: pointer;
@@ -152,7 +152,7 @@ main>section {
 }
 
 .button.blue.trans {
-	border: var(--btn-border-width) solid #03a9f4;
+	border: var(--btn-border-width) solid #0c396d;
 	color: #0c396d;
 	background-color: transparent;
 }
@@ -183,6 +183,126 @@ svg.ring {
 	padding: 10px;
 	border: 2.5px solid #0c396d;
 	border-radius: 50%;
+}
+
+/* PARALLAX CARDS */
+.parallax-cards {
+  max-width: 768px;
+}
+
+.parallax-cards>h2:first-of-type {
+  display: none;
+}
+
+.parallax-cards img {
+  --margin: 20px;
+  --width-percent: 100%;
+  margin: 30px var(--margin);
+  position: relative;
+  z-index: 2;
+  width: calc(var(--width-percent) - var(--margin) * 2);
+  /* border-radius: 4px; */
+}
+
+.parallax-cards div {
+  position: relative;
+  z-index: 1;
+  padding: 20px;
+  margin: 10px;
+  background-color: #ffffff;
+  box-shadow: 0 0px 8px 4px rgba(0,0,0,.1);
+  /* border-radius: 4px; */
+}
+
+.parallax-cards h3 {
+  margin-bottom: 0;
+}
+
+.parallax-cards .button {
+	float: right;
+}
+
+/* Textbox first, image last */
+.parallax-cards div:first-child { /* Selects div if placed in first place. */
+  float: left;
+  padding-bottom: 30px;
+}
+
+.parallax-cards img:last-child {  /* Selects image if placed in second place */
+  float: right;
+  margin-top: -25px;
+}
+
+/* Image first, text last */
+.parallax-cards div:last-child {  /* Selects div if div and image is placed in revers order */
+  float: right;
+  padding-top: 25px;
+  margin-top: -50px;
+}
+
+/* Responsive */
+@media only screen and (min-width: 600px) {
+
+  .parallax-cards img {
+    z-index: 1;
+    --width-percent: 80%;
+    --margin: 15px;
+  }
+
+  .parallax-cards div {
+    z-index: 2;
+    padding: 25px;
+    margin: 15px;
+    width: 75%;
+  }
+
+  .parallax-cards img:last-child {
+    margin-top: -20vw;
+  }
+
+  .parallax-cards div:last-child {
+    padding-top: 30px;
+    margin-top: -22vw;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .parallax-cards img {
+    --width-percent: 80%;
+  }
+
+  .parallax-cards div {
+    padding: 40px;
+    width: 65%;
+  }
+
+  .parallax-cards img:last-child {
+    margin-top: -175px;
+  }
+
+  .parallax-cards div:last-child {
+    padding-top: 50px;
+    margin-top: -200px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .parallax-cards {
+    max-width: 992px;
+  }
+
+  .parallax-cards div {
+    padding: 55px;
+    width: 60%;
+  }
+
+  .parallax-cards img:last-child {
+    margin-top: -200px; /* -20vw */
+  }
+
+  .parallax-cards div:last-child {
+    padding-top: 70px;
+  }
 }
 
 
@@ -512,4 +632,89 @@ footer h2 {
     padding: 20px 30px;
     margin-top: 0;
   }
+}
+
+/* | Services */
+
+#services {
+	padding: 5px 0px;
+}
+
+#services>h2:first-of-type,
+#services>p:first-of-type {
+  text-align: center;
+  display: block;
+}
+
+#services p {
+  color: gray;
+}
+
+#services div {
+  margin-right: auto;
+  margin-left: auto;
+	max-width: 850px;
+}
+
+#services section {
+  text-align: center;
+  border-radius: 3px;
+  margin: 10px 0px;
+  padding: 20px 20px 50px 20px;
+  box-shadow: 0 0px 6px 3px rgba(0,0,0,.1);
+}
+
+#services section svg{
+  height: 75px;
+	margin: 20px 0px 25px 0px;
+}
+
+#services section p {
+	margin-bottom: 35px;
+}
+
+#services aside p {
+  margin-bottom: 7px;
+}
+
+#services .button {
+	border-width: 3px;
+	float: none;
+	box-shadow: none;
+}
+
+/* Responsive */
+@media only screen and (min-width: 600px) {
+  #services section {
+    border: none;
+    margin: 0 0 20px 0;
+    padding-bottom: 30px;
+    text-align: left;
+  }
+
+  #services section:last-of-type {
+    margin: 0;
+  }
+
+  #services section svg {
+    margin: 20px 25px 25px 0px;
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #services section p {
+    margin-bottom: 20px;
+  }
+
+  #services section .button {
+    float: right;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  #services aside p {
+		margin-bottom: 16px;
+	}
 }
