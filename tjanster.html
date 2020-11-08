@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    
+    <title>Mediasmedjan UF</title>
+    <link rel="icon" href="./images/logo.svg">
+    
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Reklamfilmer">
+    <meta name="keywords" content="Reklamfilmer">
+    <meta name="author" content="Mediasmedjan">
+</head>
+<body>
+    <header>
+        <h1>Mediasmedjan UF</h1>
+        <div class="center-box">
+            <a href="/">
+                <h3>Logo</h3>    <!-- Temporary replacement for logo image. -->
+                <!-- <img src="./images/logoText.png" alt="" id="header-logo"> -->
+                <script>
+                    // Change logo if screen is to small
+                    function funcMax450(varMax450) {
+                        if (varMax450.matches) { // If media query matches
+                            document.getElementById("header-logo").src = "images/Logo.svg";
+                        } else {
+                            document.getElementById("header-logo").src = "images/LogoText_Låg.png";
+                        }
+                    }
+                
+                    var varMax450 = window.matchMedia("(max-width: 450px)")
+                    funcMax450(varMax450) // Call listener function at run time
+                    varMax450.addListener(funcMax450) // Attach listener function on state changes
+                </script>
+            </a>
+            <nav>
+                <input id="menu-btn" type="checkbox">
+                <label for="menu-btn">
+                    <span></span>
+                </label>
+                <ul>
+                    <li><a href="./index.html">Hem</a></li>
+                    <li><a href="./tjanster.html">Tjänster</a></li>
+                    <li><a href="./om.html">Om oss</a></li>
+                    <li><a href="./kontakt.php">Kontakt</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    
+    <main>
+        <section id="site-header" class="site-header">
+            <div class="center-box">
+                <h2>Tjänster</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>   
+            </div>
+        </section>
+
+        <section>
+            <h2>Pixellabbets tjänster</h2>
+            <article class="row">
+                <div class="col-6 col-s-12">
+                    <h2>Tjänst 1</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed in mi sollicitudin, viverra dolor sed, volutpat orci. Suspendisse condimentum massa non metus lacinia, id mollis leo tincidunt. Aenean vitae sodales erat. Quisque at est eget tellus congue hendrerit. Proin in est tellus. Donec enim leo, suscipit sed condimentum vel, accumsan id mi. Suspendisse elit sem, luctus at augue sed, elementum congue velit.</p>
+                    <p>Aliquam ornare, nulla nec malesuada luctus, diam orci posuere metus, id iaculis quam mauris nec arcu. Donec pharetra a tellus ac tincidunt. Vivamus rutrum nulla felis. Etiam dignissim dignissim tortor eu porta. Aliquam erat volutpat. Aenean lacinia sagittis.</p>
+                    <a class="button blue solid" href="/kontakt.php">Kontakta oss</a>
+                </div>
+                <div class="col-6 col-s-12">
+                    <img src="./images/about.jpg" alt="">
+                </div>
+            </article>
+
+            <article class="row">
+                <div class="col-6 col-s-12">
+                    <h2>Tjänst 2</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed in mi sollicitudin, viverra dolor sed, volutpat orci. Suspendisse condimentum massa non metus lacinia, id mollis leo tincidunt. Aenean vitae sodales erat. Quisque at est eget tellus congue hendrerit. Proin in est tellus. Donec enim leo, suscipit sed condimentum vel, accumsan id mi. Suspendisse elit sem, luctus at augue sed, elementum congue velit.</p>
+                    <p>Aliquam ornare, nulla nec malesuada luctus, diam orci posuere metus, id iaculis quam mauris nec arcu. Donec pharetra a tellus ac tincidunt. Vivamus rutrum nulla felis. Etiam dignissim dignissim tortor eu porta. Aliquam erat volutpat. Aenean lacinia sagittis.</p>
+                    <a class="button blue solid" href="/kontakt.php">Kontakta oss</a>
+                </div>
+                <div class="col-6 col-s-12">
+                    <img src="./images/about.jpg" alt="">
+                </div>
+            </article>
+
+            <article class="row">
+                <div class="col-6 col-s-12">
+                    <h2>Tjänst 3</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed in mi sollicitudin, viverra dolor sed, volutpat orci. Suspendisse condimentum massa non metus lacinia, id mollis leo tincidunt. Aenean vitae sodales erat. Quisque at est eget tellus congue hendrerit. Proin in est tellus. Donec enim leo, suscipit sed condimentum vel, accumsan id mi. Suspendisse elit sem, luctus at augue sed, elementum congue velit.</p>
+                    <p>Aliquam ornare, nulla nec malesuada luctus, diam orci posuere metus, id iaculis quam mauris nec arcu. Donec pharetra a tellus ac tincidunt. Vivamus rutrum nulla felis. Etiam dignissim dignissim tortor eu porta. Aliquam erat volutpat. Aenean lacinia sagittis.</p>
+                    <a class="button blue solid" href="/kontakt.php">Kontakta oss</a>
+                </div>
+                <div class="col-6 col-s-12">
+                    <img src="./images/about.jpg" alt="">
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <h2>
+            &copy; 2020
+            <script>
+                // Write this year if it's not equal to start year.
+                if (new Date().getFullYear() > 2020) {
+                    document.write("- " + new Date().getFullYear());
+                }
+            </script>
+            Mediasmedjan UF
+        </h2>
+    </footer>
+</body>
+</html>
