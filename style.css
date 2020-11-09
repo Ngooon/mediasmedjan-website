@@ -46,6 +46,10 @@ main>section {
 	max-width: 95%;
 }
 
+main>section:first-child {
+  max-width: initial;
+}
+
 
 /* || GENERAL RESPONSIVE */
 
