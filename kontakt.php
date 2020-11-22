@@ -54,7 +54,7 @@
         <section id="site-header" class="site-header">
             <div class="center-box">
                 <h2>Kontakt</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>   
+                <p>Om du har några funderingar eller frågor så är det bara att fråga så svarar vi så fort vi kan.</p>   
             </div>
         </section>
 
