@@ -54,7 +54,7 @@
         <section id="site-header" class="site-header">
             <div class="center-box">
                 <h2>Kontakt</h2>
-                <p>Om du har några funderingar eller frågor så är det bara att fråga så svarar vi så fort vi kan.</p>   
+                <p>Om du har några frågor eller funderingar så är det bara att fråga så svarar vi så fort vi kan.</p>   
             </div>
         </section>
 
