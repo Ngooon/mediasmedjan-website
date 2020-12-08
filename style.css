@@ -699,27 +699,27 @@ article .button {
 
 /* | Services */
 
-#services {
+.picture-rows {
 	padding: 5px 0px;
 }
 
-#services>h2:first-of-type,
-#services>p:first-of-type {
+.picture-rows>h2:first-of-type,
+.picture-rows>p:first-of-type {
   text-align: center;
   display: block;
 }
 
-#services p {
+.picture-rows p {
   color: gray;
 }
 
-#services div {
+.picture-rows div {
   margin-right: auto;
   margin-left: auto;
 	max-width: 850px;
 }
 
-#services section {
+.picture-rows section {
   text-align: center;
   border-radius: 3px;
   margin: 10px 0px;
@@ -727,20 +727,29 @@ article .button {
   box-shadow: 0 0px 6px 3px rgba(0,0,0,.1);
 }
 
-#services section svg{
+.picture-rows section svg,
+.picture-rows section div.img {
   height: 75px;
 	margin: 20px 0px 25px 0px;
 }
 
-#services section p {
+.picture-rows section div.img {
+  height: 90%;
+}
+
+.picture-rows section img {
+  height: 125px;
+}
+
+.picture-rows section p {
 	margin-bottom: 35px;
 }
 
-#services aside p {
+.picture-rows aside p {
   margin-bottom: 7px;
 }
 
-#services .button {
+.picture-rows .button {
 	border-width: 3px;
 	float: none;
 	box-shadow: none;
@@ -748,39 +757,50 @@ article .button {
 
 /* Responsive */
 @media only screen and (min-width: 600px) {
-  #services section {
+  .picture-rows section {
     border: none;
     margin: 0 0 20px 0;
     padding-bottom: 30px;
     text-align: left;
+    /* display: flex;
+    flex-direction: row;
+    justify-content: center;     */
   }
 
-  #services section:last-of-type {
+  .picture-rows section:last-of-type {
     margin: 0;
   }
 
-  #services section svg {
+  .picture-rows section svg,
+  .picture-rows section div.img {
     margin: 20px 25px 25px 0px;
     float: left;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    /* justify-content: center;
+    align-items: center; */
   }
 
-  #services section p {
+  .picture-rows section p {
     margin-bottom: 20px;
   }
 
-  #services section .button {
+  .picture-rows section .button {
     float: right;
   }
 }
 
 @media only screen and (min-width: 768px) {
-  #services aside p {
+  .picture-rows aside p {
 		margin-bottom: 16px;
 	}
 }
+
+/* | ABOUT SITE */
+
+#about-site .picture-rows>h2:first-of-type {
+  display: none;
+}
+
 
 /* | CONTACT SITE */
 
