@@ -25,7 +25,7 @@
                         if (varMax450.matches) { // If media query matches
                             document.getElementById("header-logo").src = "images/logo.svg";
                         } else {
-                            document.getElementById("header-logo").src = "images/logo-wide.png";
+                            document.getElementById("header-logo").src = "images/logo-wide.svg";
                         }
                     }
                 
