@@ -18,15 +18,14 @@
         <h1>Mediasmedjan UF</h1>
         <div class="center-box">
             <a href="/">
-                <h3>Logo</h3>    <!-- Temporary replacement for logo image. -->
-                <!-- <img src="./images/logoText.png" alt="" id="header-logo"> -->
+                <img src="./images/logo.svg" alt="" id="header-logo">
                 <script>
                     // Change logo if screen is to small
                     function funcMax450(varMax450) {
                         if (varMax450.matches) { // If media query matches
-                            document.getElementById("header-logo").src = "images/Logo.svg";
+                            document.getElementById("header-logo").src = "images/logo.svg";
                         } else {
-                            document.getElementById("header-logo").src = "images/LogoText_Låg.png";
+                            document.getElementById("header-logo").src = "images/logo-wide.png";
                         }
                     }
                 
